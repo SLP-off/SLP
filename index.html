@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLP - Solidarité, Liberté, Progrès | Collectif des Lycéens</title>
+    <link rel="icon" type="image/png" href="img/logo.jfif" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slp-dark text-gray-100 min-h-screen flex flex-col selection:bg-slp-yellow selection:text-black">
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slp-dark/80 border-b border-slp-border/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 bg-slp-yellow rounded-xl flex items-center justify-center text-black font-display font-black text-2xl shadow-lg transform group-hover:rotate-6 transition-transform">
+                    SLP
+                </div>
+                <div>
+                    <span class="font-display font-bold text-xl tracking-wider text-white block leading-none">SLP</span>
+                    <span class="text-xs text-gray-400 tracking-wider font-medium">Solidarité • Liberté • Progrès</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="missions.html" class="hover:text-slp-yellow transition-colors">Nos Missions</a>
+                <a href="revendications.html" class="hover:text-slp-yellow transition-colors">Nos Combats</a>
+                <a href="actu.html" class="hover:text-slp-yellow transition-colors">Actualités</a>
+                <a href="#rejoindre" class="hover:text-slp-yellow transition-colors">Discord / AG</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#contact" class="bg-slp-yellow text-black font-bold px-5 py-2.5 rounded-xl hover:bg-yellow-300 transition-all shadow-md hover:shadow-slp-yellow/20 text-sm">
+                    Agir avec nous
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-300 hover:text-white p-2" aria-label="Menu Mobile">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-slp-card border-b border-slp-border px-4 pt-2 pb-6 space-y-3">
+            <a href="missions.html" class="block py-2 text-gray-300 hover:text-slp-yellow font-medium">Nos Missions</a>
+            <a href="revendications.html" class="block py-2 text-gray-300 hover:text-slp-yellow font-medium">Nos Combats</a>
+            <a href="actu.html" class="block py-2 text-gray-300 hover:text-slp-yellow font-medium">Actualités</a>
+            <a href="#rejoindre" class="block py-2 text-gray-300 hover:text-slp-yellow font-medium">Discord / AG Visio</a>
+            <a href="#contact" class="block w-full text-center bg-slp-yellow text-black font-bold py-3 rounded-xl mt-4">Agir avec nous</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative py-20 lg:py-28 overflow-hidden">
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-slp-purple/20 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="absolute top-1/3 left-10 w-[300px] h-[300px] bg-slp-yellow/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slp-card border border-slp-border text-slp-yellow text-xs sm:text-sm font-semibold mb-6 shadow-sm">
+                        <span class="flex h-2 w-2 rounded-full bg-slp-yellow animate-ping"></span>
+                        Collectif Indépendant de Tous les Lycéens
+                    </div>
+                    
+                    <h1 class="font-display font-black text-4xl sm:text-6xl lg:text-7xl tracking-tight leading-none mb-6">
+                        Tous les lycéens ont enfin <span class="text-gradient">leur voix.</span>
+                    </h1>
+
+                    <p class="text-gray-300 text-lg sm:text-xl font-normal leading-relaxed mb-8">
+                        Général, Techno, Pro : face au stress des examens, aux réformes injustes et aux inégalités, faisons valoir nos droits. <strong class="text-white">Solidarité</strong> entre élèves, <strong class="text-white">Liberté</strong> d'organisation, <strong class="text-white">Progrès</strong> pour l'éducation.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="#rejoindre" class="w-full sm:w-auto bg-slp-card border border-slp-border text-white font-semibold text-base px-8 py-4 rounded-xl hover:bg-slp-border transition-all flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-discord text-slp-purple text-lg"></i> Rejoindre Discord & les Visio (AG)
+                        </a>
+                        <a href="actu.html" class="w-full sm:w-auto bg-slp-yellow text-black font-bold text-base px-8 py-4 rounded-xl hover:bg-yellow-300 transition-all flex items-center justify-center gap-2">
+                            Voir les actualités <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Stats Bar -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-12 border-t border-slp-border/60">
+                    <div class="bg-slp-card/50 p-6 rounded-2xl border border-slp-border/40 text-center">
+                        <div class="font-display font-black text-3xl sm:text-4xl text-slp-yellow">100%</div>
+                        <div class="text-xs sm:text-sm text-gray-400 mt-1 font-medium">Général • Techno • Pro</div>
+                    </div>
+                    <div class="bg-slp-card/50 p-6 rounded-2xl border border-slp-border/40 text-center">
+                        <div class="font-display font-black text-3xl sm:text-4xl text-slp-cyan">0€</div>
+                        <div class="text-xs sm:text-sm text-gray-400 mt-1 font-medium">Cotisation Obligatoire</div>
+                    </div>
+                    <div class="bg-slp-card/50 p-6 rounded-2xl border border-slp-border/40 text-center">
+                        <div class="font-display font-black text-3xl sm:text-4xl text-slp-red">100%</div>
+                        <div class="text-xs sm:text-sm text-gray-400 mt-1 font-medium">Indépendant & Autonome</div>
+                    </div>
+                    <div class="bg-slp-card/50 p-6 rounded-2xl border border-slp-border/40 text-center">
+                        <div class="font-display font-black text-3xl sm:text-4xl text-purple-400">24/7</div>
+                        <div class="text-xs sm:text-sm text-gray-400 mt-1 font-medium">Entraide entre élèves</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preview Missions Section -->
+        <section class="py-16 bg-slp-card/30 border-y border-slp-border/40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-xs uppercase tracking-widest text-slp-yellow font-bold mb-2">Que signifie SLP ?</h2>
+                    <p class="font-display font-extrabold text-3xl sm:text-4xl">Nos trois piliers fondamentaux</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 mb-10">
+                    <div class="bg-slp-card p-8 rounded-2xl border border-slp-border">
+                        <div class="w-14 h-14 bg-slp-yellow/10 rounded-2xl flex items-center justify-center text-slp-yellow text-2xl mb-6 font-bold">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-2xl mb-3 text-white">Solidarité</h3>
+                        <p class="text-gray-400 text-sm">Entraide aux examens, soutien pour Parcoursup, accompagnement stages et soutien moral.</p>
+                    </div>
+
+                    <div class="bg-slp-card p-8 rounded-2xl border border-slp-border">
+                        <div class="w-14 h-14 bg-slp-red/10 rounded-2xl flex items-center justify-center text-slp-red text-2xl mb-6 font-bold">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-2xl mb-3 text-white">Liberté</h3>
+                        <p class="text-gray-400 text-sm">Liberté d'expression, d'organisation, et représentation de la parole lycéenne.</p>
+                    </div>
+
+                    <div class="bg-slp-card p-8 rounded-2xl border border-slp-border">
+                        <div class="w-14 h-14 bg-slp-cyan/10 rounded-2xl flex items-center justify-center text-slp-cyan text-2xl mb-6 font-bold">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-2xl mb-3 text-white">Progrès</h3>
+                        <p class="text-gray-400 text-sm">Des lycées financés, une orientation équitable et des conditions d'étude décentes.</p>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="missions.html" class="inline-flex items-center gap-2 text-sm font-bold text-slp-yellow hover:underline">
+                        Découvrir le détail de toutes nos missions <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preview Combats Section -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                    <div>
+                        <h2 class="text-xs uppercase tracking-widest text-slp-red font-bold mb-2">Ce que nous défendons</h2>
+                        <p class="font-display font-extrabold text-3xl sm:text-4xl">Nos Revendications Prioritaires</p>
+                    </div>
+                    <a href="revendications.html" class="inline-flex items-center gap-2 text-sm font-bold text-slp-yellow hover:underline mt-4 md:mt-0">
+                        Voir tous nos combats en détail <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <a href="revendications.html" class="bg-slp-card p-6 rounded-2xl border border-slp-border hover:border-slp-yellow transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-slp-yellow/10 text-slp-yellow text-xs font-bold px-3 py-1 rounded-full">Orientation</span>
+                                <i class="fa-solid fa-graduation-cap text-slp-yellow text-xl"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-xl mb-2 text-white">Fin de Parcoursup Sélectif</h3>
+                            <p class="text-gray-400 text-sm">Transparence des algorithmes, fin du tri social et accès garanti au supérieur.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slp-border/60 flex items-center justify-between text-xs font-bold text-slp-yellow">
+                            <span>Voir le détail</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <a href="revendications.html" class="bg-slp-card p-6 rounded-2xl border border-slp-border hover:border-slp-cyan transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-slp-cyan/10 text-slp-cyan text-xs font-bold px-3 py-1 rounded-full">Examens</span>
+                                <i class="fa-solid fa-book-open text-slp-cyan text-xl"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-xl mb-2 text-white">Réforme du Baccalauréat</h3>
+                            <p class="text-gray-400 text-sm">Réduction de la pression du contrôle continu et évaluation plus équitable.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slp-border/60 flex items-center justify-between text-xs font-bold text-slp-cyan">
+                            <span>Voir le détail</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <a href="revendications.html" class="bg-slp-card p-6 rounded-2xl border border-slp-border hover:border-slp-red transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-slp-red/10 text-slp-red text-xs font-bold px-3 py-1 rounded-full">Conditions</span>
+                                <i class="fa-solid fa-shield-halved text-slp-red text-xl"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-xl mb-2 text-white">Bien-être & Gratuité</h3>
+                            <p class="text-gray-400 text-sm">Gratuité du matériel pédagogique, cantines accessibles et suivi médical.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slp-border/60 flex items-center justify-between text-xs font-bold text-slp-red">
+                            <span>Voir le détail</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <a href="revendications.html" class="bg-slp-card p-6 rounded-2xl border border-slp-border hover:border-purple-400 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-purple-500/10 text-purple-400 text-xs font-bold px-3 py-1 rounded-full">Voie Pro</span>
+                                <i class="fa-solid fa-briefcase text-purple-400 text-xl"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-xl mb-2 text-white">Respect des Stages (PFMP)</h3>
+                            <p class="text-gray-400 text-sm">Versement rapide des allocations d'État et arrêt des abus en entreprise.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slp-border/60 flex items-center justify-between text-xs font-bold text-purple-400">
+                            <span>Voir le détail</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discord & Visio AG Section -->
+        <section id="rejoindre" class="py-20 bg-slp-card/40 border-b border-slp-border/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-xs uppercase tracking-widest text-slp-purple font-bold mb-2">Espaces de discussion & Réunions Visio</h2>
+                    <p class="font-display font-extrabold text-3xl sm:text-4xl">Tout se passe sur Discord</p>
+                    <p class="text-gray-400 text-sm mt-3">
+                        Nos salons d'entraide par filière (Générale, Techno, Pro) et nos Assemblées Générales (AG) se déroulent directement sur le serveur Discord.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-slp-card p-8 rounded-2xl border border-slp-border text-center flex flex-col justify-between items-center group hover:border-slp-purple transition-all">
+                        <div>
+                            <div class="w-16 h-16 bg-slp-purple/10 text-slp-purple rounded-2xl flex items-center justify-center text-3xl mb-6 mx-auto">
+                                <i class="fa-brands fa-discord"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-2xl text-white mb-2">Serveur Discord SLP</h3>
+                            <p class="text-gray-400 text-sm mb-6">Échanges quotidiens, entraide aux devoirs, fiches et conseils pour Grand Oral, Parcoursup et stages.</p>
+                        </div>
+                        <a href="https://discord.gg/xzdeWz29NX" target="_blank" rel="noopener noreferrer" class="w-full bg-slp-purple text-white font-bold py-3.5 rounded-xl hover:bg-purple-600 transition-colors text-sm flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-discord"></i> Rejoindre la communauté
+                        </a>
+                    </div>
+
+                    <div class="bg-slp-card p-8 rounded-2xl border border-slp-border text-center flex flex-col justify-between items-center group hover:border-slp-yellow transition-all">
+                        <div>
+                            <div class="w-16 h-16 bg-slp-yellow/10 text-slp-yellow rounded-2xl flex items-center justify-center text-3xl mb-6 mx-auto">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-2xl text-white mb-2">Réunions Visio / AG</h3>
+                            <p class="text-gray-400 text-sm mb-6">Les Assemblées Générales virtuelles se tiennent chaque dimanche à 18h en vocal/visio sur Discord.</p>
+                        </div>
+                        <a href="https://discord.gg/xzdeWz29NX" target="_blank" rel="noopener noreferrer" class="w-full bg-slp-yellow text-black font-bold py-3.5 rounded-xl hover:bg-yellow-300 transition-colors text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-users-viewfinder"></i> Accéder aux Visio / AG
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-slp-card border border-slp-border p-8 sm:p-12 rounded-3xl relative">
+                    <div class="text-center max-w-xl mx-auto mb-10">
+                        <h2 class="text-xs uppercase tracking-widest text-slp-yellow font-bold mb-2">Passer à l'action</h2>
+                        <p class="font-display font-extrabold text-3xl sm:text-4xl">Créer une section ou poser une question</p>
+                    </div>
+
+                    <form id="slp-contact-form" class="space-y-6">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs uppercase font-bold text-gray-300 mb-2">Prénom ou Pseudo *</label>
+                                <input type="text" required class="w-full bg-slp-dark border border-slp-border rounded-xl p-3.5 text-white focus:border-slp-yellow focus:outline-none transition-colors" placeholder="Ex: Alex">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase font-bold text-gray-300 mb-2">Moyen de contact (Email / Insta / Discord) *</label>
+                                <input type="text" required class="w-full bg-slp-dark border border-slp-border rounded-xl p-3.5 text-white focus:border-slp-yellow focus:outline-none transition-colors" placeholder="Ex: alex@discord / @alex_lycee">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs uppercase font-bold text-gray-300 mb-2">Lycée / Ville / Filière</label>
+                                <input type="text" class="w-full bg-slp-dark border border-slp-border rounded-xl p-3.5 text-white focus:border-slp-yellow focus:outline-none transition-colors" placeholder="Ex: Lycée Victor Hugo, Paris (Terminale)">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase font-bold text-gray-300 mb-2">Objet de ton message</label>
+                                <select class="w-full bg-slp-dark border border-slp-border rounded-xl p-3.5 text-white focus:border-slp-yellow focus:outline-none transition-colors">
+                                    <option value="creer">Je veux créer un collectif dans mon lycée</option>
+                                    <option value="parcoursup">Question / Aide sur Parcoursup</option>
+                                    <option value="stage">Problème en stage / PFMP</option>
+                                    <option value="adhesion">Rejoindre l'équipe d'animation</option>
+                                    <option value="autre">Autre question</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs uppercase font-bold text-gray-300 mb-2">Ton Message *</label>
+                            <textarea required rows="4" class="w-full bg-slp-dark border border-slp-border rounded-xl p-3.5 text-white focus:border-slp-yellow focus:outline-none transition-colors" placeholder="Explique-nous ta situation ou ton projet..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-slp-yellow text-black font-extrabold text-base py-4 rounded-xl hover:bg-yellow-300 transition-all shadow-lg hover:shadow-slp-yellow/20">
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slp-dark border-t border-slp-border/60 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-slp-yellow rounded-lg flex items-center justify-center text-black font-display font-black text-sm">
+                    SLP
+                </div>
+                <span class="text-xs text-gray-400 font-medium">
+                    SLP (Solidarité, Liberté, Progrès) — Collectif Indépendant de Tous les Lycéens.
+                </span>
+            </div>
+
+            <div class="flex items-center gap-6 text-gray-400 text-sm">
+                <a href="missions.html" class="hover:text-slp-yellow transition-colors">Missions</a>
+                <a href="revendications.html" class="hover:text-slp-yellow transition-colors">Combats</a>
+                <a href="actu.html" class="hover:text-slp-yellow transition-colors">Actualités</a>
+                <a href="#rejoindre" class="hover:text-slp-yellow transition-colors">Discord / AG Visio</a>
+                <a href="#contact" class="hover:text-slp-yellow transition-colors">Contact</a>
+            </div>
+
+            <div class="text-xs text-gray-500">
+                Géré de manière autonome par et pour les élèves de toutes les filières lycéennes.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

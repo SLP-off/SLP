@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualités - SLP | Collectif Indépendant des Lycéens</title>
+    <link rel="icon" type="image/png" href="img/logo.jfif" />
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slp-dark text-gray-100 min-h-screen flex flex-col selection:bg-slp-yellow selection:text-black">
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slp-dark/80 border-b border-slp-border/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 bg-slp-yellow rounded-xl flex items-center justify-center text-black font-display font-black text-2xl shadow-lg transform group-hover:rotate-6 transition-transform">
+                    SLP
+                </div>
+                <div>
+                    <span class="font-display font-bold text-xl tracking-wider text-white block leading-none">SLP</span>
+                    <span class="text-xs text-gray-400 tracking-wider font-medium">Solidarité • Liberté • Progrès</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="missions.html" class="hover:text-slp-yellow transition-colors">Nos Missions</a>
+                <a href="revendications.html" class="hover:text-slp-yellow transition-colors">Nos Combats</a>
+                <a href="actu.html" class="text-slp-yellow font-bold">Actualités</a>
+                <a href="index.html#rejoindre" class="hover:text-slp-yellow transition-colors">Discord / AG Visio</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="index.html#contact" class="bg-slp-yellow text-black font-bold px-5 py-2.5 rounded-xl hover:bg-yellow-300 transition-all shadow-md hover:shadow-slp-yellow/20 text-sm">
+                    Agir avec nous
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-300 hover:text-white p-2" aria-label="Menu Mobile">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-slp-card border-b border-slp-border px-4 pt-2 pb-6 space-y-3">
+            <a href="missions.html" class="block py-2 text-gray-300 hover:text-slp-yellow font-medium">Nos Missions</a>
+            <a href="revendications.html" class="block py-2 text-gray-300 hover:text-slp-yellow font-medium">Nos Combats</a>
+            <a href="actu.html" class="block py-2 text-slp-yellow font-bold">Actualités</a>
+            <a href="index.html#rejoindre" class="block py-2 text-gray-300 hover:text-slp-yellow font-medium">Discord / AG Visio</a>
+            <a href="index.html#contact" class="block w-full text-center bg-slp-yellow text-black font-bold py-3 rounded-xl mt-4">Agir avec nous</a>
+        </div>
+    </header>
+
+    <main class="flex-grow py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <a href="index.html" class="inline-flex items-center gap-2 text-xs font-bold text-gray-400 hover:text-slp-yellow mb-4 transition-colors">
+                    <i class="fa-solid fa-arrow-left"></i> Retour à l'accueil
+                </a>
+                <h1 class="font-display font-black text-4xl sm:text-5xl text-white mb-3">Actualités & Infos Lycéennes</h1>
+                <p class="text-gray-400 max-w-2xl text-base">
+                    Conseils pour les examens, fiches pratiques Parcoursup, droits des élèves et mobilisation dans les lycées généraux, technologiques et professionnels.
+                </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 pb-6 border-b border-slp-border">
+                <span class="text-xs uppercase tracking-widest text-slp-yellow font-bold mb-4 md:mb-0">Filtrer par thème</span>
+                <div class="flex flex-wrap gap-2" id="news-filters">
+                    <button class="filter-btn active bg-slp-yellow text-black font-bold px-4 py-1.5 rounded-full text-xs transition-all" data-filter="all">Tous</button>
+                    <button class="filter-btn bg-slp-card text-gray-400 hover:text-white border border-slp-border px-4 py-1.5 rounded-full text-xs transition-all" data-filter="parcoursup">Parcoursup</button>
+                    <button class="filter-btn bg-slp-card text-gray-400 hover:text-white border border-slp-border px-4 py-1.5 rounded-full text-xs transition-all" data-filter="bac">Bac & Examens</button>
+                    <button class="filter-btn bg-slp-card text-gray-400 hover:text-white border border-slp-border px-4 py-1.5 rounded-full text-xs transition-all" data-filter="stage">Stages & PFMP</button>
+                    <button class="filter-btn bg-slp-card text-gray-400 hover:text-white border border-slp-border px-4 py-1.5 rounded-full text-xs transition-all" data-filter="droits">Vos Droits</button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6" id="news-grid">
+                <!-- Article 1 -->
+                <article class="news-item bg-slp-card rounded-2xl border border-slp-border overflow-hidden flex flex-col justify-between" data-category="parcoursup">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between text-xs text-gray-400 mb-3">
+                            <span class="text-slp-yellow font-semibold">Orientation / Parcoursup</span>
+                            <time>26 Septembre 2026</time>
+                        </div>
+                        <h3 class="font-display font-bold text-lg mb-2 text-white hover:text-slp-yellow transition-colors">
+                            Lettres de motivation Parcoursup : nos modèles et conseils
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Comment faire valoir son dossier, quelle que soit sa filière d'origine ? Téléchargez notre guide pour éviter les pièges de la sélection.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="index.html#contact" class="text-xs font-bold text-slp-yellow hover:underline flex items-center gap-1">
+                            Consulter le guide <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="news-item bg-slp-card rounded-2xl border border-slp-border overflow-hidden flex flex-col justify-between" data-category="bac">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between text-xs text-gray-400 mb-3">
+                            <span class="text-slp-cyan font-semibold">Baccalauréat</span>
+                            <time>20 Septembre 2026</time>
+                        </div>
+                        <h3 class="font-display font-bold text-lg mb-2 text-white hover:text-slp-yellow transition-colors">
+                            Contrôle continu et épreuves : vos droits pendant les évaluations
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Absences aux épreuves, rattrapages, contestations de notes : que dit la réglementation officielle de l'Éducation Nationale ?
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="index.html#contact" class="text-xs font-bold text-slp-cyan hover:underline flex items-center gap-1">
+                            Lire la fiche réflexe <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="news-item bg-slp-card rounded-2xl border border-slp-border overflow-hidden flex flex-col justify-between" data-category="stage">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between text-xs text-gray-400 mb-3">
+                            <span class="text-slp-red font-semibold">PFMP & Stages</span>
+                            <time>12 Septembre 2026</time>
+                        </div>
+                        <h3 class="font-display font-bold text-lg mb-2 text-white hover:text-slp-yellow transition-colors">
+                            Retard de gratification de stage : réclamer son allocation d'État
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Des milliers d'élèves font face à des délais de paiement inacceptables. Retrouvez notre modèle de lettre à envoyer au lycée.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="index.html#contact" class="text-xs font-bold text-slp-red hover:underline flex items-center gap-1">
+                            Voir le modèle de lettre <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slp-dark border-t border-slp-border/60 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-slp-yellow rounded-lg flex items-center justify-center text-black font-display font-black text-sm">
+                    SLP
+                </div>
+                <span class="text-xs text-gray-400 font-medium">
+                    SLP (Solidarité, Liberté, Progrès) — Collectif Indépendant de Tous les Lycéens.
+                </span>
+            </div>
+
+            <div class="flex items-center gap-6 text-gray-400 text-sm">
+                <a href="missions.html" class="hover:text-slp-yellow transition-colors">Missions</a>
+                <a href="index.html#combats" class="hover:text-slp-yellow transition-colors">Combats</a>
+                <a href="actu.html" class="hover:text-slp-yellow transition-colors">Actualités</a>
+                <a href="index.html#rejoindre" class="hover:text-slp-yellow transition-colors">Discord / AG Visio</a>
+                <a href="index.html#contact" class="hover:text-slp-yellow transition-colors">Contact</a>
+            </div>
+
+            <div class="text-xs text-gray-500">
+                Géré de manière autonome par et pour les élèves de toutes les filières lycéennes.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
